@@ -40,25 +40,26 @@ Apprendre à collaborer avec Git en travaillant **en binôme** sur un petit proj
    touch data/load_data.py
    ```
 
-```	python
-import pandas as pd
+   ```python
+   import pandas as pd
 
-def load_dataset():
-    """Charge le dataset pour l'entraînement"""
-    # Exemple de données fictives
-    data = {
-        'feature1': [1, 2, 3, 4, 5],
-        'feature2': [10, 20, 30, 40, 50],
-        'target': [0, 1, 0, 1, 0]
-    }
-    df = pd.DataFrame(data)
-    print(f"Dataset chargé : {len(df)} lignes")
-    return df
+   def load_dataset():
+      """Charge le dataset pour l'entraînement"""
+      # Exemple de données fictives
+      data = {
+         'feature1': [1, 2, 3, 4, 5],
+         'feature2': [10, 20, 30, 40, 50],
+         'target': [0, 1, 0, 1, 0]
+      }
+      df = pd.DataFrame(data)
+      print(f"Dataset chargé : {len(df)} lignes")
+      return df
 
-if __name__ == "__main__":
-    df = load_dataset()
-    print(df.head())
-```
+   if __name__ == "__main__":
+      df = load_dataset()
+      print(df.head())
+   ```
+
 3. **Ajoutez et commitez les changements :**
    ```bash
    git add data/load_data.py
@@ -172,24 +173,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
-3. Commitez et poussez les changements :
-```bash
-git add main.py
-git commit -m "Création du pipeline complet"
-git push origin main
-```
-Validation finale
-1. **Vérifiez que le pipeline fonctionne :**
-   ```bash
-   python main.py
-   ```
-   Vous devriez voir l'output du pipeline, avec les messages de chargement des données, entraînement du modèle, et précision du modèle.
-
-   Résultat attendu :
-   ```
-   === Pipeline Machine Learning ===
-   Dataset chargé : 5 lignes
-   Précision du modèle : X.XX
-   Pipeline terminé avec succès !
-   ```

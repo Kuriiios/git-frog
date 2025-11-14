@@ -1,5 +1,5 @@
 from data.load_data import load_dataset
-from models.train_model import train_model
+from model.train_model import train_model
 
 def main():
     print("=== Pipeline Machine Learning ===")
